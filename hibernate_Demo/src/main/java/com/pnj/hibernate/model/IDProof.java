@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class IDProofs {
+public class IDProof {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -83,7 +83,7 @@ public class IDProofs {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		IDProofs other = (IDProofs) obj;
+		IDProof other = (IDProof) obj;
 		if (expiryDate == null) {
 			if (other.expiryDate != null)
 				return false;

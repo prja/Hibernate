@@ -16,6 +16,6 @@
   
   
   <mapping class="com.pnj.hibernate.model.Person"/>
-  <mapping class="com.pnj.hibernate.model.IDProofs"/>
+  <mapping class="com.pnj.hibernate.model.IDProof"/>
  </session-factory>
 </hibernate-configuration>
