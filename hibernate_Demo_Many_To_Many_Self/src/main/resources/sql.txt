@@ -1,0 +1,15 @@
+CREATE TABLE `Person` (
+	`Person_id` BIGINT(10) NOT NULL AUTO_INCREMENT,
+	`firstname` VARCHAR(50) NULL DEFAULT NULL,
+	`lastname` VARCHAR(50) NULL DEFAULT NULL,
+	PRIMARY KEY (`Person_id`)
+)
+
+
+CREATE TABLE `Person_freind` (
+	`Person_id` BIGINT(20) NOT NULL,
+	`freind_id` BIGINT(20) NOT NULL,
+	PRIMARY KEY (`Person_id`, `freind_id`),
+	CONSTRAINT `FK_EMP` FOREIGN KEY (`Person_id`) REFERENCES `Person` (`Person_id`),
+	CONSTRAINT `FK_COL` FOREIGN KEY (`freind_id`) REFERENCES `Person` (`Person_id`)
+)
