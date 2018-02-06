@@ -1,0 +1,10 @@
+CREATE TABLE `Employee` (
+	`emp_id` BIGINT(10) NOT NULL AUTO_INCREMENT,
+	`firstname` VARCHAR(50) NULL DEFAULT NULL,
+	`lastname` VARCHAR(50) NULL DEFAULT NULL,
+	`manager_id` BIGINT(20) NULL DEFAULT NULL,
+	PRIMARY KEY (`emp_id`),
+	CONSTRAINT `FK_MANAGER` FOREIGN KEY (`manager_id`) REFERENCES `Employee` (`emp_id`)
+)
+
+
