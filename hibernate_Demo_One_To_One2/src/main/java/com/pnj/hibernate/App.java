@@ -27,7 +27,7 @@ public class App {
 		
 		
 		IDProof idp= new IDProof();
-		idp.setIdProofType(IDType.AADHAR.name());
+		idp.setIdProofType(IDType.AADHAR);
 		idp.setIdProofValue("493643244489");
 		idp.setIssueDate("12-12-2012");
 		idp.setExpiryDate("01-01-2018");

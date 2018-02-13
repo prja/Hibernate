@@ -1,10 +1,14 @@
 package com.pnj.hibernate.model;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+
+import com.pnj.hibernate.util.IDType;
 
 @Entity
 public class IDProof {
@@ -13,7 +17,16 @@ public class IDProof {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private String idProofType;
+	@Enumerated(EnumType.STRING)
+	private IDType idProofType;
+
+	public IDType getIdProofType() {
+		return idProofType;
+	}
+
+	public void setIdProofType(IDType idProofType) {
+		this.idProofType = idProofType;
+	}
 
 	private String idProofValue;
 
@@ -24,13 +37,7 @@ public class IDProof {
 	@OneToOne//(mappedBy="idProof")
 	private Person person;
 	
-	public String getIdProofType() {
-		return idProofType;
-	}
-
-	public void setIdProofType(String idProofType) {
-		this.idProofType = idProofType;
-	}
+	
 
 	public String getIdProofValue() {
 		return idProofValue;
